@@ -19,6 +19,7 @@
         flex: 1;
         border-radius: 5px;
         background-color: burlywood;
+        padding: 1rem;
       }
 
       .the-right {
@@ -30,6 +31,29 @@
         border-radius: 5px;
         background-color: burlywood;
       }
+
+      .item {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+      }
+      .item-title {
+        flex: 1;
+      }
+
+      .main-title {
+        font-weight: bold;
+      }
+      .price {
+        font-weight: bold;
+      }
+      hr {
+        border-color: brown;
+      }
+      .extras {
+        font-size: 0.8rem;
+        font-style: italic;
+      }
     </style>
   </head>
 
@@ -37,6 +61,43 @@
     <div class="flex-container">
       <div class="items">
         <h2>ITEMS</h2>
+
+        <div class="item-list">
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">cappuchino</div>
+              <div class="extras">light foam</div>
+            </div>
+
+            <div class="price">$6.00</div>
+          </div>
+          <hr />
+
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">cappuchino</div>
+              <div class="extras">Almond milk</div>
+              <div class="extras">Double Espresso Shot</div>
+            </div>
+
+            <div class="price">$7.90</div>
+          </div>
+          <hr />
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">Croissant</div>
+              <div class="extras">Butter</div>
+            </div>
+
+            <div class="price">$5.37</div>
+          </div>
+        </div>
       </div>
 
       <div class="the-right">
