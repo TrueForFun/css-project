@@ -54,6 +54,20 @@
         font-size: 0.8rem;
         font-style: italic;
       }
+      .input-container {
+        position: relative;
+      }
+
+      .input-container input {
+        background-color: burlywood;
+        border-radius: 10px;
+      }
+      .input-container label {
+        left: 15px;
+        top: -10px;
+        position: absolute;
+        background-color: burlywood;
+      }
     </style>
   </head>
 
@@ -67,7 +81,7 @@
             <div class="amount">x1</div>
 
             <div class="item-title">
-              <div class="main-title">cappuchino</div>
+              <div class="main-title">Cappuchino</div>
               <div class="extras">light foam</div>
             </div>
 
@@ -79,7 +93,7 @@
             <div class="amount">x1</div>
 
             <div class="item-title">
-              <div class="main-title">cappuchino</div>
+              <div class="main-title">Cappuchino</div>
               <div class="extras">Almond milk</div>
               <div class="extras">Double Espresso Shot</div>
             </div>
@@ -103,10 +117,23 @@
       <div class="the-right">
         <div class="coffee-choise">
           <h2>NAME</h2>
+          <div class="input-container">
+            <label for="name-for-order"> name for oder </label>
+            <input id="name-for-order" class="" type="text" />
+          </div>
         </div>
 
         <div class="coffee-choise">
           <h2>PAYMENT</h2>
+          <div class="input-container">
+            <label for="card-number">card number </label>
+            <input id="card-number" type="text" />
+          </div>
+          <div style="height: 1rem"></div>
+          <div class="input-container">
+            <label for="ccv">CCV number </label>
+            <input id="ccv" type="text" />
+          </div>
         </div>
       </div>
     </div>
