@@ -61,12 +61,27 @@
       .input-container input {
         background-color: burlywood;
         border-radius: 10px;
+        padding: 5px;
       }
       .input-container label {
         left: 15px;
         top: -10px;
         position: absolute;
         background-color: burlywood;
+      }
+      .lowerline div {
+        display: flex;
+        justify-content: space-around;
+      }
+      .total div {
+        font-weight: bolder;
+      }
+      .place-order div {
+        display: flex;
+        justify-content: center;
+        font-weight: bolder;
+        background-color: burlywood;
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -134,8 +149,26 @@
             <label for="ccv">CCV number </label>
             <input id="ccv" type="text" />
           </div>
+          <div style="height: 1rem"></div>
         </div>
       </div>
+    </div>
+    <div class="lowerline">
+      <div class="subtotal">
+        <div>Subtotal:</div>
+        <div>$9.65</div>
+      </div>
+      <div class="tax">
+        <div>Tax:</div>
+        <div>$0.82</div>
+      </div>
+      <div class="total">
+        <div>Total:</div>
+        <div>$10.47</div>
+      </div>
+    </div>
+    <div class="place-order">
+      <div>Place order</div>
     </div>
   </body>
 </html>
