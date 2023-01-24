@@ -1,55 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<div class="flex-container">
-    <div class="coffee-choice">
-        <h2>ITEMS</h2>
-    </div>
-    <div class="box-1">
-        <h2>NAME</h2>
-
-    </div>
-    <div>
-        <div class="box-2">
-            <h2>PAYMENT</h2>
-        </div>
-    </div>
-</div>
-
-<style>
-    .flex-container {
-        flex-direction: column;
+    <style>
+      .flex-container {
+        display: flex;
+        width: 100%;
         row-gap: 10px;
         column-gap: 10px;
 
         border-radius: 5px;
+      }
 
-    }
-</style>
-<style>
-    .box-1 {
+      .items {
+        flex: 1;
         border-radius: 5px;
         background-color: burlywood;
-    }
-</style>
-<style>
-    .box-2 {
+        padding: 1rem;
+      }
 
+      .the-right {
+        flex: 1;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .coffee-choise {
         border-radius: 5px;
         background-color: burlywood;
-    }
-</style>
-<style>
-    .coffee-choice {
-        border-radius: 5px;
-        background-color: burlywood;
-    }
-</style>
+        padding: 1rem;
+      }
+      .coffee-choise h2 {
+        margin: 0;
+        padding-bottom: 1rem;
+      }
 
+      .item {
+        display: flex;
+        gap: 1rem;
+        width: 100%;
+      }
+      .item-title {
+        flex: 1;
+      }
+
+      .main-title {
+        font-weight: bold;
+      }
+      .price {
+        font-weight: bold;
+      }
+      hr {
+        border-color: brown;
+      }
+      .extras {
+        font-size: 0.8rem;
+        font-style: italic;
+      }
+      .input-container {
+        position: relative;
+      }
+
+      .input-container input {
+        background-color: burlywood;
+        border-radius: 10px;
+        padding: 5px;
+      }
+      .input-container label {
+        left: 15px;
+        top: -10px;
+        position: absolute;
+        background-color: burlywood;
+      }
+      .lowerline {
+        padding: 0 8rem;
+      }
+      .lowerline div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .total div {
+        font-weight: bolder;
+      }
+      .place-order div {
+        display: flex;
+        justify-content: center;
+        font-weight: bolder;
+        background-color: burlywood;
+        border-radius: 10px;
+      }
+      .the-header {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: burlywood;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="Header">
+      <div>
+        <h2 class="the-header">Coffee Masters</h2>
+      </div>
+    </div>
+    <div class="flex-container">
+      <div class="items">
+        <h2>ITEMS</h2>
+
+        <div class="item-list">
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">Cappuchino</div>
+              <div class="extras">light foam</div>
+            </div>
+
+            <div class="price">$6.00</div>
+          </div>
+          <hr />
+
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">Cappuchino</div>
+              <div class="extras">Almond milk</div>
+              <div class="extras">Double Espresso Shot</div>
+            </div>
+
+            <div class="price">$7.90</div>
+          </div>
+          <hr />
+          <div class="item">
+            <div class="amount">x1</div>
+
+            <div class="item-title">
+              <div class="main-title">Croissant</div>
+              <div class="extras">Butter</div>
+            </div>
+
+            <div class="price">$5.37</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="the-right">
+        <div class="coffee-choise">
+          <h2>NAME</h2>
+          <div class="input-container">
+            <label for="name-for-order"> name for oder </label>
+            <input id="name-for-order" class="" type="text" />
+          </div>
+        </div>
+
+        <div class="coffee-choise">
+          <h2>PAYMENT</h2>
+          <div class="input-container">
+            <label for="card-number">card number </label>
+            <input id="card-number" type="text" />
+          </div>
+          <div style="height: 1rem"></div>
+          <div class="input-container">
+            <label for="ccv">CCV number </label>
+            <input id="ccv" type="text" />
+          </div>
+          <div style="height: 1rem"></div>
+        </div>
+      </div>
+    </div>
+    <div class="lowerline">
+      <div class="subtotal">
+        <div>Subtotal:</div>
+        <div>$9.65</div>
+      </div>
+      <div class="tax">
+        <div>Tax:</div>
+        <div>$0.82</div>
+      </div>
+      <div class="total">
+        <div>Total:</div>
+        <div>$10.47</div>
+      </div>
+    </div>
+    <div class="place-order">
+      <div>Place order</div>
+    </div>
+  </body>
 </html>
